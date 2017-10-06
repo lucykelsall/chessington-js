@@ -6,11 +6,12 @@ export default class Pawn extends Piece {
     }
 
     getAvailableMoves(board) {
+        let arrayOfAvailableMoves = new Array(0);
         const currentSquare = board.findPiece(this);
         if (this.isWhite) {
-            if (board.isSquareEmpty(currentSquare.col + 1))
-            currentSquare.col++;
+            arrayOfAvailableMoves.push()
+          return 
         }
-        return new Array(0);
+   //     return new Array(0);
     }
 }

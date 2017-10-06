@@ -44,8 +44,8 @@ export default class Board {
         }
     }
     // if returns true - the square is empty
-    isSquareEmpty (square) {
-        return this.board[square.row][square.col] === null;
-    }
+   // isSquareEmpty (square) {
+   //  return this[square.row][square.col] === null;
+ //   }
 }
 
