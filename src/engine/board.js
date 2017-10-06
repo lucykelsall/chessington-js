@@ -47,9 +47,12 @@ export default class Board {
             this.currentPlayer = (this.currentPlayer === Player.WHITE ? Player.BLACK : Player.WHITE);
         }
     }
-    // if returns true - the square is empty
-   // isSquareEmpty (square) {
-   //  return this[square.row][square.col] === null;
- //   }
+
+    isPieceOnBoard(pieceToFind) {
+        if (pieceToFind.row >= 0 && pieceToFind.row < this.board.length && pieceToFind.col >= 0 && pieceToFind.col < this.board.length) {
+            return true;
+        }   
+    }
+
 }
 
