@@ -1,6 +1,7 @@
 import Player from './player';
 import GameSettings from './gameSettings';
 import Square from './square';
+import Pawn from './pieces/pawn';
 
 export default class Board {
     constructor(currentPlayer) {
@@ -36,7 +37,10 @@ export default class Board {
     }
 
     movePiece(fromSquare, toSquare) {
-        const movingPiece = this.getPiece(fromSquare);        
+        const movingPiece = this.getPiece(fromSquare);  
+        if (movingPiece instanceof Pawn) {
+            movingPiece.firstTurn = false;
+        }      
         if (!!movingPiece && movingPiece.player === this.currentPlayer) {
             this.setPiece(toSquare, movingPiece);
             this.setPiece(fromSquare, undefined);

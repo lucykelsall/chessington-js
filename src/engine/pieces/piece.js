@@ -11,11 +11,6 @@ export default class Piece {
         const currentSquare = board.findPiece(this);
         board.movePiece(currentSquare, newSquare);
     }
-
-    // if the player is WHITE, it returns true, otherwise false
-    isWhite() {
-        return (this.player.WHITE ? true : false);
-    }
 }
 
 
