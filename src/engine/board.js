@@ -2,6 +2,7 @@ import Player from './player';
 import GameSettings from './gameSettings';
 import Square from './square';
 import Pawn from './pieces/pawn';
+import Rook from './pieces/rook';
 
 export default class Board {
     constructor(currentPlayer) {
@@ -54,5 +55,12 @@ export default class Board {
         }   
     }
 
-}
+    isSquareEmpty(square) {
+        if (this.getPiece(square) === undefined) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
+}
